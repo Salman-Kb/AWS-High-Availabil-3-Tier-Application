@@ -1,0 +1,24 @@
+# Diagram Overview
+
+
+  In this project you can find the below:
+  1- Presentation Tier (Frontend)
+    * Nginx web servers in Auto Scaling Group
+    * Public-facing Network Load Balancer
+    * CloudFront Distribution for static content
+
+  2- Application Tier (Backend)
+    * Apache Tomcat servers in Auto Scaling Group
+    * Internal Network Load Balancer
+    * Session management with Amazon ElastiCache
+
+  3- Data Tier
+    * Amazon RDS MySQL in Multi-AZ configuration
+    * Automated backups and point-in-time recovery
+    * Read replicas for read-heavy workloads
+
+    Network Architecture
+    * VPC Design
+     - Two separate VPCs (192.168.0.0/16 and 172.32.0.0/16)
+    - Public and private subnets across multiple AZs
+    - Transit Gateway for inter-VPC communication
